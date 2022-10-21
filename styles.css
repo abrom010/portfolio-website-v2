@@ -1,0 +1,541 @@
+:root {
+	--myblue: #A1CAD3;
+	--darker: #57b7cc;
+	--darkest: #1887a0;
+
+	--main-light-color: var(--myblue);
+	--main-dark-color: var(--myblue);
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: bolder;
+	margin-bottom: 10px;
+}
+
+h2 {
+	margin: 0;
+	padding-bottom: 3px;
+	color: rgb(50, 50, 50);
+	font-style: italic;
+}
+
+h3 {
+	font-size: 16px;
+	color: rgb(50, 50, 50);
+	font-style: italic;
+	display: inline-block;
+}
+
+p {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	padding: 0;
+	white-space: nowrap;
+}
+
+footer {
+	width: 100%;
+	background-color: var(--main-light-color);
+}
+
+nav {
+	display: block;
+}
+
+.nav-link-wrapper {
+	padding-bottom: 30px;
+	padding-top: 30px;
+	display: flex;
+	justify-content: end;
+}
+
+.nav-link {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: var(--main-dark-color);
+	display: inline-block;
+}
+
+.nav-link:hover {
+	color: var(--main-dark-color);
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: black;
+}
+
+.introduction-outer-container {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.introduction-inner-container {
+	display: flex;
+	justify-content: center;
+}
+
+.introduction-text {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.introduction-text>h1,
+h2 {
+	margin: 0;
+	padding: 0;
+	margin-right: 40px;
+}
+
+.introduction-picture-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.introduction-picture {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 300px;
+	border-radius: 50%;
+	/*animation-name: roll-in-profile-picture;
+	animation-duration: 1s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;*/
+}
+
+@keyframes roll-in-profile-picture {
+	0% {
+		transform: translateX(75vw) rotateZ(720deg);
+	}
+
+	90% {
+		transform: translateX(-10%) rotateZ(-20deg);
+	}
+
+	100% {
+		transform: translateX(0) rotateZ(0);
+	}
+}
+
+.main-content-container {
+	display: flex;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-top: 40px;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.main-content-left-column {
+	width: 70%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
+}
+
+.main-content-right-column {
+	width: 30%;
+	margin-right: 60px;
+}
+
+.main-content-right-column>h1 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.main-content-right-column>div {
+	display: inline-block;
+}
+
+.outer-experience-container {
+	display: flex;
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.experience-container {
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+}
+
+.experience-container>h1 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	display: inline;
+	max-width: 300px;
+}
+
+.scroll-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: 20px;
+}
+
+.scroll-buttons button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	border-radius: 50%;
+	background-color: var(--myblue);
+	border: none;
+	width: 10px;
+	height: 10px;
+	margin: 5px 5px 0 0;
+}
+
+.active-button {
+	background-color: var(--darkest) !important;
+}
+
+.mobile-button {
+	display: none;
+}
+
+.preview-image {
+	width: 90%;
+	min-width: 350px;
+	width: 350px;
+	height: 200px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+}
+
+.mobile-preview-image {
+	width: 160px;
+	height: 280px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+}
+
+.previews-container {
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+	height: 310px;
+	position: relative;
+	justify-content: start;
+	align-items: start;
+	flex-grow: 0;
+}
+
+.preview-couple {
+	display: inline-flex;
+	margin-bottom: 80px;
+	align-items: start;
+	flex-grow: 0;
+}
+
+.left-blue-border {
+	border-left-style: solid;
+	border-left-width: 3px;
+	border-left-color: var(--main-dark-color);
+}
+
+.preview-outer {
+	display: inline-flex;
+	flex-grow: 0;
+	margin-bottom: 200px;
+}
+
+.preview {
+	padding-left: 20px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.preview h2 {
+	margin: 0;
+	display: inline;
+}
+
+.preview div {
+	margin-right: 50px;
+}
+
+.preview a {
+	text-decoration: none;
+}
+
+.preview h2:hover {
+	color: var(--darker);
+}
+
+.outer-footer-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.inner-footer-container {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.inner-footer-container>h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.inner-footer-container>p>a {
+	color: blue;
+}
+
+.inner-footer-container>p>a:hover {
+	color: white;
+}
+
+.runner-container {
+	transform: translateY(-4px);
+	margin: 0;
+	padding: 0;
+	height: 39px;
+	justify-content: end;
+	align-items: end;
+	object-fit: cover;
+	margin: 0 auto;
+}
+
+.runner {
+	height: 39px;
+	width: 42px;
+	transform: translateY(4px);
+	object-fit: cover;
+	margin: 0 auto;
+}
+
+.nav-link-wrapper>div {
+	border-left-style: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 1300px) {
+	/*.nav-link-wrapper {
+		justify-content: start;
+		flex-direction: row-reverse;
+	}
+*/
+	.introduction-outer-container {
+		justify-content: center;
+		/* margin-left: 10%; */
+	}
+
+	.main-content-container {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.main-content-right-column {
+		width: 100%;
+		display: flex;
+		margin: 0;
+		/* margin-left: auto; */
+		justify-content: center;
+	}
+
+	.main-content-left-column {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media (max-width: 900px) {
+	.mobile-button {
+		display: block;
+	}
+
+	.preview-outer {
+		margin-bottom: 80px;
+		border-left-style: solid;
+		border-left-width: 3px;
+		border-left-color: var(--main-dark-color);
+	}
+
+	.preview-couple {
+		flex-direction: column;
+		margin-bottom: 0px;
+	}
+
+	.main-content-left-column {
+		margin-left: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.main-content-right-column {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	.outer-experience-container {
+		justify-content: center;
+	}
+
+	.introduction-outer-container {
+		justify-content: center;
+		margin-left: 10px;
+	}
+
+	.introduction-inner-container {
+		flex-direction: column;
+	}
+
+	.nav-link-wrapper {
+		justify-content: center;
+	}
+
+	.introduction-text {
+		text-align: center;
+	}
+
+	.preview div {
+		margin-right: 0;
+	}
+
+	.scroll-buttons button {
+		width: 11px;
+		height: 11px;
+		margin: 7px 7px 0 0;
+	}
+
+	.introduction-outer-container {
+		margin-left: 0;
+	}
+
+	.introduction-text>h1,
+	h2 {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.nav-link-wrapper {
+		flex-direction: column-reverse;
+		padding-left: 15px;
+		align-items: center;
+		padding-right: 15px;
+	}
+
+	.nav-link {
+		display: inline;
+	}
+
+	.preview-image {
+		min-width: auto;
+		width: 95%;
+		height: auto;
+	}
+
+	.inner-footer-container {
+		text-align: center;
+	}
+
+	.preview-outer {
+		margin-bottom: 400px;
+	}
+
+	h2 {
+		margin-right: 0;
+	}
+
+	.scroll-buttons {
+		margin: 0;
+	}
+
+	.introduction-outer-container {
+		margin-left: 0;
+	}
+
+	.main-content-right-column>div {
+		text-align: center;
+	}
+
+	* {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* .main-content-right-column > h1, h2, p {
+		text-align: center;
+	} */
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--darker)
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--darkest);
+}
